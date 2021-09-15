@@ -2,6 +2,10 @@ class ArticlesController < ApplicationController
     def index        
     end
 
+    def show
+        @article = Article.find(params[:id])
+    end
+
     def new
         @article = Article.new
     end
@@ -9,7 +13,7 @@ class ArticlesController < ApplicationController
     def create
         @article = Article.new(user_params)
         if @article.save
-            redirect_to articles_path
+            redirect_to article_path(@article)
         else
             render 'new'
         end
