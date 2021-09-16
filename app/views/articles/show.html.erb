@@ -3,30 +3,8 @@
 <p><%= @article.body %></p>
 <%= link_to 'back to articles', articles_path %>
 
-<h2>Comments</h2>
-<% @article.comments.each do |comment| %>
-  <p>
-    <strong>Username:</strong>
-    <%= comment.user_name %>
-  </p>
-
-  <p>
-    <strong>Comment:</strong>
-    <%= comment.body %>
-  </p>
-<% end %>
+<h2>Comments:</h2>
+<%= render @article.comments %>
 
 <h2>Add a comment:</h2>
-<%= form_with model: [@article, @article.comments.build] do |f| %>
-<div>
-    <%= f.label :user_name %>
-    <%= f.text_field :user_name %>
-</div>
-<div>
-    <%= f.label :body %>
-    <%= f.text_area :body %>
-</div>
-<div>
-    <%= f.submit %>
-</div>
-<% end %>
+ <%= render 'comments/form' %>
