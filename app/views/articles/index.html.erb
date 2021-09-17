@@ -1,4 +1,9 @@
 <% provide(:title,'Home') %>
-<h1>A Blog about nothing</h1>
-<%= render @articles %>
+<section id="hero">
+    <h1>Horror Movie Reviews/Rants</h1>
+</section>
+<main id="articles-container">
+    <h1 id='subtitle' >Articles</h1>
+    <%= render @articles %>
+</main>
 <%= link_to 'New article', new_article_path %>

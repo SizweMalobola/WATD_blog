@@ -14,22 +14,3 @@ header {
     font-weight: 900;
   }
 }
-section {
-  color: white;
-  height: 150px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: rgb(179, 5, 5);
-}
-
-@media (min-width: 400px) {
-  header {
-  }
-  section {
-    h1 {
-      font-size: 1rem;
-      font-weight: 400;
-    }
-  }
-}
