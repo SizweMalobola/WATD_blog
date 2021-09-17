@@ -1,11 +1,57 @@
+$blue-primary: rgb(2, 107, 243);
+$blue-secondary: rgb(0, 38, 87);
+$red-primary: rgb(255, 0, 0);
+$red-secondary: rgb(187, 9, 9);
+$yellow-primary: rgb(240, 224, 6);
+$yellow-secondary: rgb(194, 194, 0);
+$white-primary: white;
+$white-secondary: rgb(151, 151, 151);
 .btn {
   text-decoration: none;
   border: 1px solid black;
   border-radius: 4px;
   padding: 0.4em;
   color: black;
+  transition: all 50ms linear;
   &:hover {
     cursor: pointer;
     background-color: blue;
+  }
+}
+.new {
+  color: white;
+  background-color: $blue-primary;
+  border-color: $blue-primary;
+  &:hover {
+    background-color: $blue-secondary;
+    border-color: $blue-secondary;
+  }
+}
+.delete {
+  color: white;
+  background-color: $red-primary;
+  border-color: $red-primary;
+  &:hover {
+    background-color: $red-secondary;
+    border-color: $red-secondary;
+  }
+}
+
+.edit {
+  color: black;
+  background-color: $yellow-primary;
+  border-color: $yellow-primary;
+  &:hover {
+    background-color: $yellow-secondary;
+    border-color: $yellow-secondary;
+  }
+}
+
+.show {
+  color: black;
+  background-color: $white-primary;
+  border-color: $white-secondary;
+  &:hover {
+    background-color: $white-secondary;
   }
 }
