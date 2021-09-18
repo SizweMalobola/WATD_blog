@@ -1,3 +1,5 @@
+@import "shared.scss";
+
 section {
   color: white;
   height: 150px;
@@ -14,17 +16,42 @@ main {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 1.5rem 0;
+    margin: 2rem 0;
     h1 {
       font-weight: 400;
     }
   }
 }
+// individual articles
+.article-box {
+  border-bottom: 1px solid black;
+  padding-bottom: 2rem;
+  h3 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+}
+
 @media (min-width: 400px) {
   section {
     h1 {
       font-size: 1rem;
       font-weight: 400;
+    }
+  }
+  .article-box {
+    h3 {
+      font-size: 1.3rem;
+    }
+    span {
+      display: block;
+      margin-bottom: 1rem;
+      font-size: 0.9rem;
+      color: $white-secondary;
+    }
+    p {
+      display: none;
+      color: red;
     }
   }
 }
