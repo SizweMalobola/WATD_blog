@@ -1,7 +1,8 @@
 <% provide(:title,@article.title) %>
 <h1><%= @article.title %></h1>
 <p><%= @article.body %></p>
-<%= link_to 'back to articles', articles_path %>
+<%= link_to 'Back to articles', articles_path, class: 'btn back' %>
+<%= link_to 'Edit article', edit_article_path(@article), class: 'btn edit' %>
 
 <h2>Comments:</h2>
 <%= render @article.comments %>
