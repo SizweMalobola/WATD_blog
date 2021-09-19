@@ -2,9 +2,9 @@
 <section id="hero">
     <h1>Horror Movie Reviews/Rants</h1>
 </section>
-<main id="articles-container">
+<main id="articles-container" class="">
     <div>
-        <h1 id='subtitle' >Articles</h1>
+        <h1 id='subtitle' class="text-4xl" >Articles</h1>
         <%= link_to 'New article', new_article_path, class: 'btn new' %>
     </div>
     <%= render @articles %>
