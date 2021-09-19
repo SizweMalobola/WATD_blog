@@ -4,7 +4,9 @@
         <span><%= article.created_at %></span>
     </div>
     <div>
+    <% if article.body.embeds.present? %>
         <%= image_tag article.body.embeds.first.blob %>
+    <% end %>
     </div>
     <div class="btn-links">
         <%= link_to 'Read more', article_path(article), class: 'btn show' %>
