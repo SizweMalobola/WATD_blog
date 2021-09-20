@@ -1,11 +1,17 @@
 <% provide(:title,@article.title) %>
-<h1><%= @article.title %></h1>
-<p><%= @article.body %></p>
-<%= link_to 'Back to articles', articles_path, class: 'btn back' %>
-<%= link_to 'Edit article', edit_article_path(@article), class: 'btn edit' %>
+<div class="bg-gray-100 p-4 rounded-md">
+    <h1 class="text-3xl font-semibold"><%= @article.title %></h1>
+    <%= @article.body %>
+</div>
+<div class='py-6'>
+    <%= link_to 'Back to articles', articles_path, class: 'btn back' %>
+    <%= link_to 'Edit article', edit_article_path(@article), class: 'btn edit' %>
+</div>
 
+<% if @article.comments.count != 0 %>
 <h2>Comments:</h2>
 <%= render @article.comments %>
+<% end %>
 
 <h2>Add a comment:</h2>
  <%= render 'comments/form' %>
