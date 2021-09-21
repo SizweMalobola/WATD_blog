@@ -1,9 +1,4 @@
-<div class="comment-container">
-  <div>
-    <strong>Comment:</strong>
-    <%= comment.body %>
+  <div class="bg-white mb-8 py-4 border-2 relative">
+    <p class="text-gray-800"><%= comment.body %></p>
+    <%= link_to 'X', [comment.article,comment], method: :delete, data: { confirm: "Are you sure?" }, class: "btn absolute top-0 right-0" %>
   </div>
-  <div>
-    <%= link_to 'Delete comment', [comment.article,comment], method: :delete, data: { confirm: "Are you sure?" } %>
-  </div>
-</div>

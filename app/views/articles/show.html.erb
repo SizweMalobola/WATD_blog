@@ -11,12 +11,13 @@
 </div>
 
 
-<div class="bg-gray-100 p-4 rounded-md">
-    <h2 class="pb-2">Add a comment:</h2>
+<div class="bg-gray-100 p-4 rounded-md mx-auto max-w-2xl">
+    <h2 class="pb-2 text-xl">Add a comment:</h2>
     <%= render 'comments/form' %>
-</div>
-
 <% if @article.comments.count != 0 %>
-    <h2 class="pd-2">Comments:</h2>
-    <%= render @article.comments %>
+    <div class="mt-12 pb-12">
+        <h2 class="mb-8 text-xl">Comments:</h2>
+        <%= render @article.comments %>
+    </div>
 <% end %>
+</div>

@@ -1,6 +1,6 @@
 <%= form_with model: [@article, @article.comments.build] do |f| %>
-<div>
-    <%= f.text_area :body, class: 'rounded-md' %>
+<div class="mb-2">
+    <%= f.text_area :body, class: 'rounded-md w-full' %>
 </div>
 <div>
     <%= f.submit class: 'btn' %>
