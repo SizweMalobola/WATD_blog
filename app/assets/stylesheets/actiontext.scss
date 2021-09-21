@@ -31,7 +31,16 @@
     .attachment {
       padding: 0 !important;
       max-width: 100% !important;
+      > img {
+        width: 100%;
+        margin-top: 1rem;
+      }
     }
+  }
+  // aligning figcaption to the left
+  .attachment__caption {
+    margin: 1rem 0;
+    text-align: left;
   }
 }
 
