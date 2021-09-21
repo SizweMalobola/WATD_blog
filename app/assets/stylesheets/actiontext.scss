@@ -34,3 +34,21 @@
     }
   }
 }
+
+// TRIX-EDITOR
+
+trix-editor {
+  overflow: auto;
+  > div {
+    > figure {
+      display: flex;
+      flex-direction: column;
+      > img {
+        align-self: center;
+      }
+      > figcaption {
+        text-align: center;
+      }
+    }
+  }
+}
