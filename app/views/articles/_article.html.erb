@@ -1,12 +1,10 @@
-<div class="article-box max-w-xl mx-auto">
+<div class="article-box max-w-xl min-w-full mx-auto md:max-w-none bg-red-100">
     <div>
         <h3 class="text-3xl"><%= article.title %></h3>
         <span><%= article.created_at %></span>
     </div>
-    <div>
-    <% if article.body.embeds.present? %>
+    <div class="">
         <%= image_tag article.body.embeds.first.blob %>
-    <% end %>
     </div>
     <div class="btn-links">
         <%= link_to 'Read more', article_path(article), class: 'btn show' %>
