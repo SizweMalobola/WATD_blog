@@ -1,6 +1,12 @@
 <% provide(:title,'Home') %>
-<section id="hero">
-    <h1>Horror Movie Reviews/Rants</h1>
+<section id="hero relative">
+    <div class="flex justify-center items-center">
+        <%= image_tag('hero.png', alt: 'hero image') %>
+    </div>
+    <div class="bg-white absolute">
+        <h1 class="text-red-800 text-xl sm:text-2xl xl:text-3xl font-bold">That is not dead which can eternal lie,<br>
+And with strange aeons even death may die.</h1>
+    </div>
 </section>
 <main id="articles-container" class="">
     <div>
