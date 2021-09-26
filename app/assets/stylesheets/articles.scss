@@ -16,9 +16,9 @@ main {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 2rem 0;
+    margin: 4rem 0;
     h1 {
-      font-weight: 400;
+      // font-weight: 400;
     }
   }
 }
@@ -90,6 +90,13 @@ main {
       > a:last-child {
         grid-area: delete;
       }
+    }
+  }
+}
+@media (min-width: 1020px) {
+  main {
+    > div:first-child {
+      align-items: baseline;
     }
   }
 }
