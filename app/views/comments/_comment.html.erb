@@ -1,4 +1,6 @@
-  <div class="bg-white mb-8 py-4 pr-2.5 border-2 relative">
-    <p class="text-gray-800"><%= comment.body %></p>
-    <%= link_to 'X', [comment.article,comment], method: :delete, data: { confirm: "Are you sure?" }, class: "btn delete absolute top-0 right-0 w-2 flex flex-row justify-center items-center h-full" %>
-  </div>
+  <% if comment.body != nil %>
+    <div class="bg-white mb-8 py-4 pr-2.5 border-2 relative">
+      <p class="text-gray-800"><%= comment.body %></p>
+      <%= link_to 'X', [comment.article,comment], method: :delete, data: { confirm: "Are you sure?" }, class: "btn delete absolute top-0 right-0 w-2 flex flex-row justify-center items-center h-full" %>
+    </div>
+  <% end %>
