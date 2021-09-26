@@ -4,7 +4,11 @@
         <span><%= article.created_at %></span>
     </div>
     <div class="">
-        <%= image_tag article.body.embeds.first.blob %>
+        <% if article.body.embeds.first.present? %>
+            <%= image_tag article.body.embeds.first.blob %>
+        <% else %>
+           <%= image_tag("https://www.samint.co.za/wp-content/uploads/image-placeholder.jpg") %>
+        <% end %>
     </div>
     <div class="btn-links">
         <%= link_to 'Read more', article_path(article), class: 'btn show' %>
