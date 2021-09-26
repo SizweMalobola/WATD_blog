@@ -40,7 +40,7 @@ main {
     }
   }
   .article-box {
-    padding: 1rem 0;
+    padding: 1rem;
     display: grid;
     grid-template-areas:
       "title title image"
@@ -93,10 +93,65 @@ main {
     }
   }
 }
-@media (min-width: 1020px) {
+@media (min-width: 1560px) {
   main {
     > div:first-child {
       align-items: baseline;
+    }
+  }
+  .article-box {
+    padding: 1rem 0;
+    display: grid;
+    grid-template-areas:
+      "image image image"
+      "image image image"
+      "title title title"
+      "links links links";
+    > div:first-child {
+      grid-area: title;
+      text-align: center;
+      h3 {
+        font-size: 1.4rem;
+      }
+      span {
+        display: block;
+        font-size: 0.9rem;
+        color: $white-secondary;
+      }
+    }
+    > div:nth-child(2) {
+      margin-bottom: 1rem;
+      grid-area: image;
+      justify-self: center;
+      background-color: $blue-secondary;
+      width: 500px;
+      height: 500px;
+      overflow: hidden;
+      > img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    > div:last-child {
+      grid-area: links;
+      // padding: 0 1rem;
+      display: grid;
+      gap: 5px;
+      grid-template-areas:
+        "read read  edit edit"
+        ". delete delete .";
+      > a {
+        text-align: center;
+      }
+      > a:first-child {
+        grid-area: read;
+      }
+      > a:nth-child(2) {
+        grid-area: edit;
+      }
+      > a:last-child {
+        grid-area: delete;
+      }
     }
   }
 }
